@@ -10,13 +10,30 @@
 <body class="p-4">
     <section id="events" class="mx-auto bg-primary rounded py-3 px-2">
         <h2>Events in Action</h2>
-        <button v-on:click="add(5)" class="text-bg-secondary rounded border border-muted m-2 ms-0">Add 5</button>
-        <button v-on:click="reduce(5)" class="text-bg-secondary rounded border border-muted m-2 ms-0">Reduce 5</button>
+        <button @click="add(5)" class="text-bg-secondary rounded border border-muted m-2 ms-0">Add 5</button>
+        <button @click="reduce(5)" class="text-bg-secondary rounded border border-muted m-2 ms-0">Reduce 5</button>
         <p class="text-bg-primary">Result: {{counter}}</p>
         <input type="text" v-model="name">
         <input type="text" v-model="lastName">
+        <p class="text-bg-primary p-4 rounded bg-info mt-4">{{fullName}}</p>
     </section>
 
+
+
+
+    <!-- <button v-on:click="add(5)"">Add 5</button>
+
+                ist als Shorthand
+
+
+    <button @click="add(5)">Add 5</button> -->
+
+    <!-- <button v-bind:value="HEllo"">Add 5</button>
+
+                ist als Shorthand
+
+
+    <button :value="Hello">Add 5</button> -->
 
 
 

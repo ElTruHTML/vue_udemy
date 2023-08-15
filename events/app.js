@@ -6,6 +6,7 @@ let app = Vue.createApp({
             counter: 0,
             name: "",
             lastName: "",
+            // fullName: "",
         }
     },
     /**Watcher erwarten Methoden. Die NAmen der MEthoden MÜSSEN UNBEDINGT mit den Namen der Properties übereinstimmen.
@@ -13,20 +14,30 @@ let app = Vue.createApp({
      * @param: {newVal} = Der neue Wert, der geändert wurde
      * @param: {oldVal} = Der Wert, wie er VOR DER ÄNDERUNG war*/
     watch: {
-        name() {
-            this.name
+        counter(value) {
+            if(value > 50) {
+                this.counter = 0;
+            }
         },
     },
     computed: {
-        fullname() {
+        fullName() {
             console.log("Running");
             if(this.name === "" || this.lastName === "") {
                 return "";
             }
             else {
-                return this.name + " " + "Trumic";
+                return this.name + " " + this.lastName;
             }
         }
     },
+    methods: {
+        add(val) {
+            this.counter += 5;
+        },
+        reduce(val) {
+            this.counter -= 5;
+        },
+    }
 })
 .mount("#events");
