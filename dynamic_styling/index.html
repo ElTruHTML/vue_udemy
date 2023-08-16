@@ -9,6 +9,15 @@
     <title>Dynamic Styling</title>
 </head>
 <body>
+
+    <section id="test">
+        <a v-bind:href="mylink">MyLink</a>
+        <p v-html="myHTML"></p>
+        <button v-on:click="add(adder)">Add</button>
+        <div style="padding: 10px 20px;">{{counter}}</div>
+        <input type="text" v-on:input="showstuff($event, 'Trumic')">
+        <p>{{stuffshown}}</p>
+    </section>
     <section id="styling">
         <div :class="{demo: true, clicked_div: boxASelected}" @click="boxSelected('A')"></div>
         <div :class="{demo: true, clicked_div: boxBSelected}" @click="boxSelected('B')"></div>

@@ -23,3 +23,25 @@ let app = Vue.createApp({
     }
 })
 .mount("#styling");
+
+Vue.createApp({
+    data() {
+        return {
+            mylink: "https://www.google.de",
+            myHTML: "<h2>Mein HTML</h2>",
+            counter: 0,
+            adder: 16,
+            stuffshown: "",
+        };
+    },
+    methods: {
+        add(val) {
+            this.counter += val;
+        },
+        showstuff(e, ln) {
+            console.log(e);
+            console.log(e.target);
+            this.stuffshown = e.target.value + " " + ln;
+        },
+    }
+}).mount("#test");
