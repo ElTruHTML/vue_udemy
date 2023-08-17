@@ -14,9 +14,11 @@
         <a v-bind:href="mylink">MyLink</a>
         <p v-html="myHTML"></p>
         <button v-on:click="add(adder)">Add</button>
-        <div style="padding: 10px 20px;">{{counter}}</div>
-        <input type="text" v-on:input="showstuff($event, 'Trumic')">
-        <p>{{stuffshown}}</p>
+        <p v-once style="padding: 10px 20px;">Starting Counter: {{counter}}</p>
+        <p style="padding: 10px 20px;">{{counter}}</p>
+        <input type="text" v-model="name">
+        <button v-on:click="resetInput" class="gadget text-bg-danger py2 px4 border-0">Reset</button>
+        <p>{{name}}</p>
     </section>
     <section id="styling">
         <div :class="{demo: true, clicked_div: boxASelected}" @click="boxSelected('A')"></div>

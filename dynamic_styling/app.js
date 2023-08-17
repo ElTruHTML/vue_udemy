@@ -31,17 +31,20 @@ Vue.createApp({
             myHTML: "<h2>Mein HTML</h2>",
             counter: 0,
             adder: 16,
-            stuffshown: "",
+            name: "Eldin",
         };
     },
     methods: {
         add(val) {
             this.counter += val;
         },
-        showstuff(e, ln) {
+        setName(e, ln) {
             console.log(e);
             console.log(e.target);
-            this.stuffshown = e.target.value + " " + ln;
+            this.name = e.target.value;
         },
+        resetInput() {
+            this.name = "";
+        }
     }
 }).mount("#test");
