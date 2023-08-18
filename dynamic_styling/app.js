@@ -31,19 +31,22 @@ Vue.createApp({
             myHTML: "<h2>Mein HTML</h2>",
             counter: 0,
             adder: 16,
-            name: "Eldin",
+            name: "",
         };
     },
     methods: {
         add(val) {
+            console.log("Methode add läuft");
             this.counter += val;
         },
         setName(e, ln) {
+            console.log("Methode setName läuft");
             console.log(e);
             console.log(e.target);
             this.name = e.target.value;
         },
         resetInput() {
+            console.log("Methode resetInput läuft");
             this.name = "";
         }
     }
