@@ -17,8 +17,9 @@
         <p v-once style="padding: 10px 20px;">Starting Counter: {{counter}}</p>
         <p style="padding: 10px 20px;">{{counter}}</p>
         <input type="text" v-model="name">
+        <input type="text" v-model="lastname">
         <button v-on:click="resetInput" class="gadget text-bg-danger py2 px4 border-0">Reset</button>
-        <p>{{name}}</p>
+        <p>{{fullname}}</p>
     </section>
     <section id="styling">
         <div :class="{demo: true, clicked_div: boxASelected}" @click="boxSelected('A')"></div>

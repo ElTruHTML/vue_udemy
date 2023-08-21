@@ -32,7 +32,39 @@ Vue.createApp({
             counter: 0,
             adder: 16,
             name: "",
+            lastname: "",
+            // fullname: "",
         };
+    },
+    watch: {
+        counter(newVal) {
+            if(newVal > 50) {
+                this.counter = 0;
+            }
+        },
+        // name(newVal) {
+        //     if(newVal === ""){
+        //         this.fullname = "";
+        //         return;
+        //     }
+        //     this.fullname = newVal + " " + this.lastname;
+        // },
+        // lastname(newVal) {
+        //     if(newVal === ""){
+        //         this.fullname = "";
+        //         return;
+        //     }
+        //     this.fullname = this.name + " " + newVal;
+        // },
+    },
+    computed: {
+        fullname() {
+            console.log("Running again");
+            if(this.name === "" || this.lastname === "") {
+                return "";
+            }
+            return this.name + " " + this.lastname;
+        },
     },
     methods: {
         add(val) {
@@ -48,6 +80,6 @@ Vue.createApp({
         resetInput() {
             console.log("Methode resetInput läuft");
             this.name = "";
-        }
+        },
     }
 }).mount("#test");
