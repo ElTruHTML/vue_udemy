@@ -1,0 +1,14 @@
+.user-1 {
+    background-color: skyblue;
+    color: white;
+}
+.user-2 {
+    background-color: firebrick;
+    color: white;
+}
+.hiddenclass {
+    display: none;
+}
+.visibleclass {
+    display: block;
+}
