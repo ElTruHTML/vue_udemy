@@ -11,13 +11,13 @@
 <body class="pt-5">
     <section id="style" class="border border-dark rounded w-75 p-3 mx-auto d-flex flex-column justify-content-between align-items-center">
         <div class="demo"
-            :class="{aktiv: boxASelected}"
+            :class="boxAClasses"
             @click="boxSelected('A')"></div>
         <div class="demo"
-            :class="{aktiv: boxBSelected}"
+            :class="boxBClasses"
             @click="boxSelected('B')"></div>
         <div class="demo"
-            :class="{aktiv: boxCSelected}"
+            :class="boxCClasses"
             @click="boxSelected('C')"></div>
     </section>
 
