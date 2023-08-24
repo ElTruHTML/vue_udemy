@@ -14,10 +14,10 @@
     </header>
     <section id="user-goals">
         <h2>My course goals</h2>
-        <input type="text">
-        <button>Add goal</button>
-        <p>No goals have been added yet - please start adding...</p>
-        <ul class="list-unstyled border border-dark">
+        <input v-model="enteredGoalValue" type="text">
+        <button @click="addGoal">Add goal</button>
+        <p v-if="goals.length === 0">No goals have been added yet - please start adding...</p>
+        <ul v-if="goals.length > 0" class="list-unstyled border border-dark">
             <li class="text-bg-secondary py-2 px-3 rounded mb-3">Goal</li>
         </ul>
     </section>
