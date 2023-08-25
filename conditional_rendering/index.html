@@ -17,9 +17,14 @@
         <input v-model="enteredGoalValue" type="text">
         <button @click="addGoal">Add goal</button>
         <p v-if="goals.length === 0">No goals have been added yet - please start adding...</p>
-        <ul v-if="goals.length > 0" class="list-unstyled border border-dark">
-            <li class="text-bg-secondary py-2 px-3 rounded mb-3">Goal</li>
+        
+        <ul v-else class="list-unstyled border border-dark">
+            <li v-for="singGoal in goals" class="text-bg-secondary py-2 px-3 rounded mb-3">{{ singGoal}}</li>
         </ul>
+
+        <!-- <ul>
+            <li v-for="value in object">{{value}}</li>
+        </ul> -->
     </section>
 
 

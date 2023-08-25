@@ -3,6 +3,10 @@ Vue.createApp({
         return {
             enteredGoalValue: "",
             goals: [],
+            object: {
+                name: "Eldin",
+                age: 30,
+            },
         };
     },
     methods: {
