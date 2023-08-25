@@ -14,12 +14,12 @@
     </header>
     <section id="user-goals">
         <h2>My course goals</h2>
-        <input v-model="enteredGoalValue" type="text">
+        <input v-model="enteredGoalValue" @keypress.enter="addGoal" type="text">
         <button @click="addGoal">Add goal</button>
         <p v-if="goals.length === 0">No goals have been added yet - please start adding...</p>
         
         <ul v-else class="list-unstyled border border-dark">
-            <li v-for="singGoal in goals" class="text-bg-secondary py-2 px-3 rounded mb-3">{{ singGoal}}</li>
+            <li v-for="(goal, idx) in goals" @click="removeGoal(idx)" class="text-bg-secondary py-2 px-3 rounded mb-3">{{ goal }} - {{idx}}</li>
         </ul>
 
         <!-- <ul>
